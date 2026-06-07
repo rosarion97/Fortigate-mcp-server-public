@@ -1,0 +1,35 @@
+version: "2"
+registry:
+  fortigate-readonly:
+    name: FortiGate Read-Only
+    description: Query a Fortinet FortiGate firewall (FortiOS REST API v2) in read-only mode. Retrieve system info, network/routing state, firewall policies and objects, VPN status, security profiles, and logs — without making any configuration changes. The server is pinned to a single VDOM via FORTIGATE_VDOM; tools cannot target a different VDOM. Not affiliated with or endorsed by Fortinet.
+    categories:
+      - security
+      - network
+      - monitoring
+    image: fortigate-readonly-mcp:latest
+    secrets:
+      - name: FORTIGATE_API_TOKEN
+        env: FORTIGATE_API_TOKEN
+        required: true
+        description: FortiOS REST API token (System > Administrators > Create New > REST API Admin; scope to read-only and bind a Trusthost)
+      - name: FORTIGATE_HOST
+        env: FORTIGATE_HOST
+        required: true
+        description: Hostname or IP of the FortiGate management interface
+      - name: FORTIGATE_VDOM
+        env: FORTIGATE_VDOM
+        required: true
+        description: VDOM this server instance is pinned to (use "root" if VDOMs are not enabled). Tools cannot target a different VDOM.
+      - name: FORTIGATE_PORT
+        env: FORTIGATE_PORT
+        required: false
+        description: HTTPS admin port (default 443)
+      - name: FORTIGATE_VERIFY_SSL
+        env: FORTIGATE_VERIFY_SSL
+        required: false
+        description: TLS verification — "yes" (default) for production, "no" only for self-signed lab certs
+      - name: FORTIGATE_MAX_RESPONSE_BYTES
+        env: FORTIGATE_MAX_RESPONSE_BYTES
+        required: false
+        description: JSON byte cap per tool response. Default 120000 (~30k tokens).
