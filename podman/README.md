@@ -5,6 +5,12 @@ FortiGate FortiOS REST API v2. Packaged as a Podman container and designed to
 be launched directly by an MCP client (Claude Desktop or Claude Code) over the
 **stdio** transport.
 
+> New here? Start with the [repo overview](../README.md). Prefer **Docker**?
+> The Docker sibling lives in [`../docker/`](../docker/README.md); the
+> `server.py` is byte-for-byte identical — only the runtime tooling differs.
+
+> Not affiliated with or endorsed by Fortinet. Use at your own risk.
+
 ---
 
 ## 1. Overview

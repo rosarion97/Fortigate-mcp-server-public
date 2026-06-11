@@ -4,7 +4,8 @@ A Model Context Protocol (MCP) server that lets Claude **query** a **Fortinet Fo
 
 This server is designed to run inside a Docker container managed by the **Docker MCP Gateway**. Secrets live in Docker Desktop's encrypted secret store, out of Claude Desktop's config file. A plaintext `.env` option is also available for quick local testing.
 
-> Prefer **Podman**? A rootless Podman variant lives in the [`../podman/`](../podman/README.md) sibling directory.
+> New here? Start with the [repo overview](../README.md). Prefer **Podman**? A
+> rootless Podman variant lives in the [`../podman/`](../podman/README.md) sibling directory.
 
 > Not affiliated with or endorsed by Fortinet. Use at your own risk.
 
